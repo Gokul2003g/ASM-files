@@ -1,0 +1,26 @@
+
+;<Program title>
+;GOKUL
+;CB.EN.U4CYS21018
+
+;division using repeated subtraction
+
+;only works with dividend and divisors where the remainder is 0.
+
+jmp start
+
+;data
+
+
+;code
+start: nop
+
+mvi b,18 ;number to be divided
+mvi c, 3 ;divisor - this value gets subtracted from 90 which is in the accumulator
+mvi d, 0 ;quotient variable which will finally reach its max value
+add b	 ;adds this to the accumulator
+
+loop: 	inr d
+	sub c
+	jnz loop
+hlt
